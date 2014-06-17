@@ -9,20 +9,22 @@
     tools:context="edu.gatech.convertor.TemperatureActivity$PlaceholderFragment" >
 
     <TextView
-        android:id="@+id/textWeight"
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="54dp"
-        android:text="Temperature" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="111dp"
+        android:layout_marginTop="60dp"
+        android:text="TTemperature Convertor" />
 
     <EditText
         android:id="@+id/textTemp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textWeight"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="42dp"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="54dp"
         android:ems="10"
         android:inputType="numberDecimal" >
 
@@ -33,9 +35,9 @@
         android:id="@+id/radioGroup1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textWeight"
         android:layout_below="@+id/textTemp"
-        android:layout_marginTop="72dp" >
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp" >
 
         <RadioButton
             android:id="@+id/radio0"
@@ -43,16 +45,15 @@
             android:layout_height="wrap_content"
             android:checked="true"
             android:text="Celsius" 
-            android:onClick="handleClick"/>
+            android:onClick="handleClick" />
 
         <RadioButton
             android:id="@+id/radio1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Fahrenheit"
+            android:text="Fahrenheit" 
             android:onClick="handleClick" />
 
-       
     </RadioGroup>
 
 </RelativeLayout>

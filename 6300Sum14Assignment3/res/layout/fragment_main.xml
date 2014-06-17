@@ -12,30 +12,28 @@
         android:id="@+id/clickDist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-         android:layout_below="@+id/clickDist"
-        android:layout_marginTop="60dp"
-        android:text="Click to go to Distance Convertor" 
-        android:onClick="handleClick"
-        android:textSize="20dip"/>
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="97dp"
+        android:layout_marginTop="36dp"
+        android:text="Distance Convertor" />
 
     <Button
         android:id="@+id/clickTemp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/clickDist"
-        android:layout_below="@+id/clickDist"
-        android:onClick="handleClick1"
-        android:text="Click to go to Temperature Convertor"
-        android:textSize="20dip" />
+        android:layout_alignLeft="@+id/clickWeight"
+        android:layout_below="@+id/clickWeight"
+        android:layout_marginTop="40dp"
+        android:text="Temperature Convertor" />
 
     <Button
         android:id="@+id/clickWeight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/clickTemp"
-        android:layout_below="@+id/clickTemp"
-        android:onClick="handleClick2"
-        android:text="Click to go to Weight Convertor"
-        android:textSize="20dip" />
+        android:layout_alignLeft="@+id/clickDist"
+        android:layout_below="@+id/clickDist"
+        android:layout_marginTop="40dp"
+        android:text="Weight Convertor" />
 
 </RelativeLayout>

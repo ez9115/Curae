@@ -9,37 +9,21 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.os.Build;
 
 public class MainActivity extends ActionBarActivity {
-    //Button dest;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		// I was trying to use this apporach , but id did not work
-		//dest=(Button)findViewById(R.id.clickDest);
-		//dest.setOnClickListener((OnClickListener) this);
-	
-			
 
 		if (savedInstanceState == null) {
 			getSupportFragmentManager().beginTransaction()
 					.add(R.id.container, new PlaceholderFragment()).commit();
 		}
 	}
-	
-	public void onClick (View view){
-		
-	    Intent intent = new Intent(this, DistanceActivity.class);
-	   
-	    startActivity(intent);
-	    finish();
-}
-
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -77,20 +61,18 @@ public class MainActivity extends ActionBarActivity {
 			return rootView;
 		}
 	}
-	public void handleClick(View view){
+	public void handleClick( View view){
 		Intent intent = new Intent(this, DistanceActivity.class);
 		startActivity(intent);
-		//finish();
 	}
-
 	public void handleClick1(View view){
-		Intent intent = new Intent(this, TemperatureActivity.class);
-		startActivity(intent);
-		//finish();
-	}
-	public void handleClick2(View view){
 		Intent intent = new Intent(this, WeightActivity.class);
 		startActivity(intent);
 	}
+	public void handleClick2(View view){
+		Intent intent = new Intent(this, TemperatureActivity.class);
+		startActivity(intent);
+	}
+
 
 }

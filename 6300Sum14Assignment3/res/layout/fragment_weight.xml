@@ -12,16 +12,20 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
-        android:text="Weight" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="114dp"
+        android:layout_marginTop="62dp"
+        android:text="Weight Convertor" />
 
     <EditText
         android:id="@+id/textWeight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
         android:layout_below="@+id/textView1"
-        android:layout_marginTop="28dp"
+        android:layout_marginRight="44dp"
+        android:layout_marginTop="52dp"
         android:ems="10"
         android:inputType="numberDecimal" >
 
@@ -32,24 +36,27 @@
         android:id="@+id/radioGroup1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textWeight"
         android:layout_below="@+id/textWeight"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="48dp" >
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="65dp" >
 
         <RadioButton
             android:id="@+id/radio0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
-            android:onClick="handleClick"
-            android:text="killos" />
+            android:text="Killo" 
+            android:onClick="handleClick" />
 
         <RadioButton
             android:id="@+id/radio1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="handleClick"
-            android:text="Pounds" />
+            android:text="Pounds" 
+            android:onClick="handleClick" />
+
+        
     </RadioGroup>
 
 </RelativeLayout>
