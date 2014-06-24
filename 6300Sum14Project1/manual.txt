@@ -1,0 +1,38 @@
+﻿Average Sentence Count (ASC) User Manual
+
+
+Summary Description:
+The Average Sentence Count application is a tool that will process a text file to find the average number of words per sentence in a file; It can process any plain text file on your computer. It can be configured to use any keyboard character as a word separator, any keyboard character as a sentence separator, and can skip words below a specified size.
+
+
+Technical Requirements:
+Computer running Java version 7+
+Install from: https://www.java.com/en/download
+
+
+How to start running ASC on your computer:
+* Receive and place the ASC.zip file on your computer 
+* Unzip it to preferred folder
+* Setup  CLASSPATH as environment variable 
+* Open command window:
+      Windows: Start->Windows->Command Prompt
+         Type the following in Windows command prompt: set CLASSPATH=.;ASC.jar
+      Mac: Finder->Applications->Utilities->Terminal
+         Type the following in MacOS terminal: set CLASSPATH=.:ASC.jar
+      Linux: Open preferred terminal software
+         Type the following in Linux terminal: set CLASSPATH=.:ASC.jar
+* Run the ASC application
+                       Generic Input Format: java <MainASC.class> <FileDirectory> space     <FileName> space -d space ”&/@” space -l space <number>
+      
+
+
+* A Simple Example:
+                     Input With an essay.txt File: java gatech.cs6300.project1.MainASC C:\Users\John\Documents\ essay.txt
+                     Input With Some Simple Delimiters: java gatech.cs6300.project1.MainASC C:\Users\John\Documents\ essay.txt -d ” &/@” -l 5  
+                     Options:
+                      “<word delimiter>”: Use this to specify which characters separate words
+                         default value: “ “
+                      -d: Use this to specify which characters separate sentences
+                         default value: “.”, “!”, and “?”
+                      -l: Use this to specify the minimum word size for analysis. 
+                         default value: 3
