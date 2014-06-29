@@ -1096,7 +1096,7 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f050016;
         public static final int action_menu_presenter=0x7f050017;
         public static final int action_mode_close_button=0x7f050024;
-        public static final int action_settings=0x7f050051;
+        public static final int action_settings=0x7f050053;
         public static final int activity_chooser_view_content=0x7f050025;
         public static final int always=0x7f05000b;
         public static final int beginning=0x7f050011;
@@ -1111,6 +1111,8 @@ containing a value of this type.
         public static final int dialog=0x7f05000e;
         public static final int disableHome=0x7f050008;
         public static final int dropdown=0x7f05000f;
+        public static final int editText1=0x7f050051;
+        public static final int editText2=0x7f050052;
         public static final int edit_query=0x7f050030;
         public static final int end=0x7f050013;
         public static final int expand_activities_button=0x7f050026;
@@ -1218,12 +1220,14 @@ containing a value of this type.
         public static final int activity_reports=0x7f03001a;
         public static final int activity_user_manager=0x7f03001b;
         public static final int activity_view_edit_user=0x7f03001c;
-        public static final int fragment_main=0x7f03001d;
-        public static final int fragment_purchase_preorder=0x7f03001e;
-        public static final int fragment_reports=0x7f03001f;
-        public static final int fragment_user_manager=0x7f030020;
-        public static final int fragment_view_edit_user=0x7f030021;
-        public static final int support_simple_spinner_dropdown_item=0x7f030022;
+        public static final int activity_vip_login=0x7f03001d;
+        public static final int fragment_main=0x7f03001e;
+        public static final int fragment_purchase_preorder=0x7f03001f;
+        public static final int fragment_reports=0x7f030020;
+        public static final int fragment_user_manager=0x7f030021;
+        public static final int fragment_view_edit_user=0x7f030022;
+        public static final int fragment_vip_login=0x7f030023;
+        public static final int support_simple_spinner_dropdown_item=0x7f030024;
     }
     public static final class menu {
         public static final int main=0x7f0c0000;
@@ -1231,6 +1235,7 @@ containing a value of this type.
         public static final int reports=0x7f0c0002;
         public static final int user_manager=0x7f0c0003;
         public static final int view_edit_user=0x7f0c0004;
+        public static final int vip_login=0x7f0c0005;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
@@ -1280,6 +1285,7 @@ containing a value of this type.
         public static final int title_activity_reports=0x7f0a0013;
         public static final int title_activity_user_manager=0x7f0a0010;
         public static final int title_activity_view_edit_user=0x7f0a0011;
+        public static final int title_activity_vip_login=0x7f0a0014;
     }
     public static final class style {
         /** 

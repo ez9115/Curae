@@ -38,6 +38,10 @@
             android:name="edu.gatech.coffeecart.Reports"
             android:label="@string/title_activity_reports" >
         </activity>
+        <activity
+            android:name="edu.gatech.coffeecart.VipLogin"
+            android:label="@string/title_activity_vip_login" >
+        </activity>
     </application>
 
 </manifest>

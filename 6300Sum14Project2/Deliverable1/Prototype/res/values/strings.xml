@@ -8,5 +8,6 @@
     <string name="title_activity_view_edit_user">ViewEditUser</string>
     <string name="title_activity_purchase_preorder">PurchasePreorder</string>
     <string name="title_activity_reports">Reports</string>
+    <string name="title_activity_vip_login">VipLogin</string>
 
 </resources>
