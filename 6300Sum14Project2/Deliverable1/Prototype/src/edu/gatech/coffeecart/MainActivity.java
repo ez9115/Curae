@@ -1,8 +1,10 @@
 package edu.gatech.coffeecart;
 
+
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -60,6 +62,37 @@ public class MainActivity extends ActionBarActivity {
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
             return rootView;
         }
+    }
+    
+    public void handleClick(View view)
+    {            	
+        switch(view.getId())
+        {
+
+            case R.id.userManager:
+            	Intent intentUserManager = new Intent(MainActivity.this, UserManager.class);
+                MainActivity.this.startActivity(intentUserManager);
+                break;
+            case R.id.purchasePreoroder:
+            	Intent intentPurchasePreorder = new Intent(MainActivity.this, PurchasePreorder.class);
+                MainActivity.this.startActivity(intentPurchasePreorder);
+                break;
+            case R.id.generateReport:
+            	Intent intentGenerateReport = new Intent(MainActivity.this, Reports.class);
+                MainActivity.this.startActivity(intentGenerateReport);
+                break;
+                
+/*    		case R.id.Temp:
+            	Intent intentTemp = new Intent(MainActivity.this, Temp.class);
+                MainActivity.this.startActivity(intentTemp);
+                break;               
+            case R.id.Weight:
+            	Intent intentWeight = new Intent(MainActivity.this, Weight.class);
+                MainActivity.this.startActivity(intentWeight);
+                break;*/                        
+            
+        }
+
     }
 
 }

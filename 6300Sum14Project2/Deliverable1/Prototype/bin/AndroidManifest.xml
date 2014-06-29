@@ -22,6 +22,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="edu.gatech.coffeecart.UserManager"
+            android:label="@string/title_activity_user_manager" >
+        </activity>
+        <activity
+            android:name="edu.gatech.coffeecart.ViewEditUser"
+            android:label="@string/title_activity_view_edit_user" >
+        </activity>
+        <activity
+            android:name="edu.gatech.coffeecart.PurchasePreorder"
+            android:label="@string/title_activity_purchase_preorder" >
+        </activity>
+        <activity
+            android:name="edu.gatech.coffeecart.Reports"
+            android:label="@string/title_activity_reports" >
+        </activity>
     </application>
 
 </manifest>

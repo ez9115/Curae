@@ -4,5 +4,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="edu.gatech.coffeecart.MainActivity"
-    tools:ignore="MergeRootFrame" />
+    tools:ignore="MergeRootFrame" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/userManager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="handleClick"
+            android:text="User Manager" />
+
+        <Button
+            android:id="@+id/purchasePreoroder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="handleClick"
+            android:text="Process Purchase/Preorder" />
+
+        <Button
+            android:id="@+id/generateReport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="handleClick"
+            android:text="Generate Report" />
+    </LinearLayout>
+
+</FrameLayout>
 
