@@ -71,7 +71,11 @@ public class UserManager extends ActionBarActivity {
             	Intent intentAddEditUser = new Intent(UserManager.this, ViewEditUser.class);
                 UserManager.this.startActivity(intentAddEditUser);
                 break;
-                   
+                
+            case R.id.btnEditUser:
+            	Intent intentEditUser = new Intent(UserManager.this, ViewEditUser.class);
+                UserManager.this.startActivity(intentEditUser);
+                break;        
             
         }
 

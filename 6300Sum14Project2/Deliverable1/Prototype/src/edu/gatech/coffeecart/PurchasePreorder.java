@@ -67,7 +67,7 @@ public class PurchasePreorder extends ActionBarActivity {
         switch(view.getId())
         {
 
-            case R.id.userManager:
+            case R.id.btnCheckout:
             	Intent intentUserManager = new Intent(PurchasePreorder.this, MainActivity.class);
                 PurchasePreorder.this.startActivity(intentUserManager);
                 break;                       

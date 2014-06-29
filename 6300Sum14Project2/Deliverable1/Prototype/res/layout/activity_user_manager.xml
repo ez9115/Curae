@@ -18,12 +18,24 @@
 
         </ListView>
 
-        <Button
-            android:id="@+id/userDetails"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="handleClick"
-            android:text="Add User" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/userDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="handleClick"
+                android:text="Add User" />
+
+            <Button
+                android:id="@+id/btnEditUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="handleClick"
+                android:text="Edit User" />
+        </LinearLayout>
 
     </LinearLayout>
 
