@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="edu.gatech.coffeecart"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="edu.gatech.coffeecart.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="edu.gatech.coffeecart.UserManager"
+            android:label="@string/title_activity_user_manager" >
+        </activity>
+        <activity
+            android:name="edu.gatech.coffeecart.ViewEditUser"
+            android:label="@string/title_activity_view_edit_user" >
+        </activity>
+        <activity
+            android:name="edu.gatech.coffeecart.PurchasePreorder"
+            android:label="@string/title_activity_purchase_preorder" >
+        </activity>
+        <activity
+            android:name="edu.gatech.coffeecart.Reports"
+            android:label="@string/title_activity_reports" >
+        </activity>
+        <activity
+            android:name="edu.gatech.coffeecart.VipLogin"
+            android:label="@string/title_activity_vip_login" >
+        </activity>
+    </application>
+
+</manifest>
