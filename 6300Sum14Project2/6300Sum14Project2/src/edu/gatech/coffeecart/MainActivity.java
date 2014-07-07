@@ -1,6 +1,8 @@
 package edu.gatech.coffeecart;
 
 
+import edu.gatech.coffeecart.DAL.Models.Item;
+import edu.gatech.coffeecart.DAL.Repositories.ItemsDataRepository;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -11,10 +13,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.os.Build;
+
+
 
 public class MainActivity extends ActionBarActivity {
-
+	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +28,8 @@ public class MainActivity extends ActionBarActivity {
                     .add(R.id.container, new PlaceholderFragment())
                     .commit();
         }
+        
+        
     }
 
 
@@ -36,6 +41,8 @@ public class MainActivity extends ActionBarActivity {
         return true;
     }
 
+
+    
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -78,9 +85,9 @@ public class MainActivity extends ActionBarActivity {
                 MainActivity.this.startActivity(intentPurchasePreorder);
                 break;
             case R.id.generateReport:
-            	Intent intentGenerateReport = new Intent(MainActivity.this, Reports.class);
-                MainActivity.this.startActivity(intentGenerateReport);
-                break;
+            	/*Intent intentGenerateReport = new Intent(MainActivity.this, Reports.class);
+                MainActivity.this.startActivity(intentGenerateReport);*/
+
                 
 /*    		case R.id.Temp:
             	Intent intentTemp = new Intent(MainActivity.this, Temp.class);
