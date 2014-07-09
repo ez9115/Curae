@@ -84,6 +84,10 @@ public class MainActivity extends ActionBarActivity {
             	Intent intentPurchasePreorder = new Intent(MainActivity.this, VipLogin.class);
                 MainActivity.this.startActivity(intentPurchasePreorder);
                 break;
+            case R.id.itemManager:
+            	Intent intentItemManager = new Intent(MainActivity.this, ManageItems.class);
+            	MainActivity.this.startActivity(intentItemManager);
+            	break;
             case R.id.generateReport:
             	/*Intent intentGenerateReport = new Intent(MainActivity.this, Reports.class);
                 MainActivity.this.startActivity(intentGenerateReport);*/

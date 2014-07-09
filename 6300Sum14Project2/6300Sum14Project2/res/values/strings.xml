@@ -9,5 +9,24 @@
     <string name="title_activity_purchase_preorder">PurchasePreorder</string>
     <string name="title_activity_reports">Reports</string>
     <string name="title_activity_vip_login">VipLogin</string>
-
+    <string name="title_activity_manage_items">Manage Menu Items</string>
+    <string name="title_activity_item_adder">Add New Menu Item</string>
+    <string name="title_activity_item_editor">Edit Menu Items</string>
+    <string name="title_activity_item_list">List of Menu Items</string>
+	<string-array name="item_types">
+		<item>Coffee</item>
+		<item>Dessert</item>
+	</string-array>
+	<string-array name="dessert_types">
+		<item>Vanilla</item>
+		<item>Strawberry</item>
+		<item>Chocolate</item>
+		<item>ButterScotch</item>
+	</string-array>
+	<string-array name="coffee_sizes">
+		<item>Small</item>
+		<item>Medium</item>
+		<item>Large</item>
+		<item>Extra Large</item>
+	</string-array>
 </resources>

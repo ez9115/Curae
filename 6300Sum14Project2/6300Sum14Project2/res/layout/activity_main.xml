@@ -31,6 +31,14 @@
             android:layout_height="wrap_content"
             android:onClick="handleClick"
             android:text="Generate Report" />
+
+        <Button
+            android:id="@+id/itemManager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="handleClick"
+            android:text="Manage Menu Items" />
+
     </LinearLayout>
 
 </FrameLayout>

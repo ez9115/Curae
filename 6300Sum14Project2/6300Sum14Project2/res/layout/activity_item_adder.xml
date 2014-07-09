@@ -1,0 +1,126 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.gatech.coffeecart.ItemAdder"
+    tools:ignore="MergeRootFrame" >
+
+  
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical" >
+          
+     <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item Name"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+     <EditText
+         android:id="@+id/itemName"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:ems="10" >
+         <requestFocus />
+      </EditText>  
+         
+      <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item Price"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+      <EditText
+          android:id="@+id/itemPrice"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:ems="10"
+          android:inputType="numberDecimal" />
+      
+       <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item Type"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+       <Spinner
+           android:id="@+id/itemType"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content" 
+           android:drawSelectorOnTop="true"
+           android:entries="@array/item_types"/>
+       <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Coffee Size"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+       <Spinner
+           android:id="@+id/itemType"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content" 
+           android:drawSelectorOnTop="true"
+           android:entries="@array/coffee_sizes"/>
+       <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dessert Type"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+       <Spinner
+           android:id="@+id/itemType"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content" 
+           android:drawSelectorOnTop="true"
+           android:entries="@array/dessert_types"/>
+       <TextView
+           android:id="@+id/textView1"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Dessert Availability Date"
+           android:textAppearance="?android:attr/textAppearanceSmall" />
+
+       <EditText
+           android:id="@+id/dessertAvailabilityDate"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:ems="10"
+           android:inputType="date" />
+       
+       <CheckBox
+           android:id="@+id/dessertBestSeller"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Best Seller Dessert" />
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content" >
+         <Button
+	        android:id="@+id/saveItem"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:onClick="handleClick"
+	        android:text="Save" />
+         
+      	 <Button
+	        android:id="@+id/cancelAdd"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:onClick="handleClick"
+	        android:text="Cancel" />
+     </LinearLayout>
+   
+     
+    </LinearLayout>
+
+   
+
+</FrameLayout>

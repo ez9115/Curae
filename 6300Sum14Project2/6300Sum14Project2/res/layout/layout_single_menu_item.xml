@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/itemName"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:paddingTop="10dp"
+        android:text="Large Text"
+        android:textColor="#000000" />
+
+    <ImageButton
+        android:id="@+id/itemEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_menu_edit" 
+        android:onClick="handleClick" />
+
+    <ImageButton
+        android:id="@+id/itemDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_menu_close_clear_cancel" 
+        android:onClick="handleClick" />
+
+</LinearLayout>

@@ -42,6 +42,26 @@
             android:name="edu.gatech.coffeecart.VipLogin"
             android:label="@string/title_activity_vip_login" >
         </activity>
-    </application>
+        <activity
+            android:name="edu.gatech.coffeecart.ManageItems"
+            android:label="@string/title_activity_manage_items" >
+        </activity>
+        <activity
+            android:name="edu.gatech.coffeecart.ItemAdder"
+            android:label="@string/title_activity_item_adder"
+            android:parentActivityName="edu.gatech.coffeecart.ManageItems" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.gatech.coffeecart.ManageItems" />
+        </activity>
+        <activity
+            android:name="edu.gatech.coffeecart.ItemEditor"
+            android:label="@string/title_activity_item_editor"
+            android:parentActivityName="edu.gatech.coffeecart.ManageItems" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.gatech.coffeecart.ManageItems" />
+        </activity>
+        </application>
 
 </manifest>
