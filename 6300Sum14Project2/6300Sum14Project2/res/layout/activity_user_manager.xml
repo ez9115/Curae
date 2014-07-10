@@ -1,0 +1,43 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.gatech.coffeecart.UserManager"
+    tools:ignore="MergeRootFrame" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/listView1"
+            android:layout_width="match_parent"
+            android:layout_height="167dp" >
+
+        </ListView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/userDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="handleClick"
+                android:text="Add User" />
+
+            <Button
+                android:id="@+id/btnEditUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="handleClick"
+                android:text="Edit User" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    </FrameLayout>
+
