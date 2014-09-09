@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="12.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>490</x>
+      <y>530</y>
+      <w>340</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Simulator
+--
++dimen: int
++plate: float[][]
+--
++Simulator(Simulator simulator: void)
++Simulator(SimulatorParams params: void)
++Simulator(float top, float bottom, float left,
+				double float: void)
+--
++heat(): void
++heat(int max_iter, float delta): void
++toString(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>490</x>
+      <y>320</y>
+      <w>340</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Simulator
+--
++dimen: int
++plate: Double[][]
+--
++Simulator(Simulator simulator: void)
++Simulator(SimulatorParams params: void)
++Simulator(Double top, Double bottom, Double left,
+				Double right: void)
+--
++heat(): void
++heat(int max_iter, double delta): void
++toString(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>490</x>
+      <y>100</y>
+      <w>340</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Simulator
+--
++dimen: int
++plate: double[][]
+--
++Simulator(Simulator simulator: void)
++Simulator(SimulatorParams params: void)
++Simulator(double top, double bottom, double left,
+				double right: void)
+--
++heat(): void
++heat(int max_iter, double delta): void
++toString(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1010</x>
+      <y>90</y>
+      <w>390</w>
+      <h>350</h>
+    </coordinates>
+    <panel_attributes>SimulatorParams
+--
++dimen : int
++bottom : Double
++left: Double
++right: Double
++top: Double
+--
++SimulatorParams(Double top, Double bottom, 
+                          Double left, Double right, int dimen): void
++SimulatorParams(String[]) : void
+-check_dimension(int) : void
+-check_temp_range(Double): void
+-shutdown_parser(String): void
+-usage(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>800</x>
+      <y>160</y>
+      <w>230</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>30;30;210;50</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>800</x>
+      <y>250</y>
+      <w>230</w>
+      <h>380</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>30;360;210;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>800</x>
+      <y>230</y>
+      <w>230</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>30;160;210;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>170</x>
+      <y>110</y>
+      <w>170</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Tpdahp.Demo
+--
++Demo():void
+--
+main(String[] args) void)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>170</x>
+      <y>530</y>
+      <w>170</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Twdahp.Demo
+--
++Demo():void
+--
+main(String[] args) void)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>170</x>
+      <y>320</y>
+      <w>170</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Twdahp.Demo
+--
++Demo():void
+--
+main(String[] args) void)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>310</x>
+      <y>560</y>
+      <w>200</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>180;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>310</x>
+      <y>360</y>
+      <w>200</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>180;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>310</x>
+      <y>140</y>
+      <w>200</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>180;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>180</x>
+      <y>800</y>
+      <w>170</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Tpdohp.Demo
+--
++Demo():void
+--
+main(String[] args) void)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
