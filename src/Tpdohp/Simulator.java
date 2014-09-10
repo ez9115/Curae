@@ -13,7 +13,7 @@ public class Simulator {
 	 * (t_l = top_left and has value 'top')
 	 * 
 	 *    null - null - null - null - null - null  - null
-	 *    null - t_l  -  top - top  - top  - right - null
+	 *    null - t_l  -  top - top  - top  - top   - null
 	 *    null - left -  0.0 - 0.0  - 0.0  - right - null
 	 *    null - left -  0.0 - 0.0  - 0.0  - right - null
 	 *    null - left -  0.0 - 0.0  - 0.0  - right - null
@@ -43,6 +43,14 @@ public class Simulator {
 		stitch_rows(above, leftmost);
 	}
 	
+	/**
+	 * Utility function to create a top or bottom row of nodes, all with the
+	 * same temperature
+	 * @param temp the temperature each node should be initialized to
+	 * @param is_bot if false, this is the top row. If true, this is the bottom
+	 * 	row
+	 * @return the leftmost PlateNode of the row
+	 */
 	private PlateNode create_node_top_or_bot_row(double temp, boolean is_bot) {
 		PlateNode leftmost = new PlateNode(temp, false, is_bot);
 		PlateNode current = leftmost;
@@ -54,7 +62,13 @@ public class Simulator {
 		current.right = new PlateNode(current, temp, true, is_bot); //make the right edge node
 		return leftmost;
 	}
-	
+	/**
+	 * Utility function to create a middle row of nodes, all with the
+	 * same temperature
+	 * @param temp_left the temperature left nodes should be initialized to
+	 * @param temp_right the temperature right nodes should be initialized to
+	 * @return the leftmost PlateNode of the row
+	 */
 	private PlateNode create_node_mid_row(double temp_left, double temp_right) {
 		PlateNode leftmost = new PlateNode(temp_left, false, false);
 		PlateNode current = leftmost;
@@ -67,6 +81,11 @@ public class Simulator {
 		return leftmost;
 	}
 	
+	/**
+	 * Given two rows of Nodes, attaches each nodes' above and below attributes.
+	 * @param above The row that is above 
+	 * @param below The row that is below
+	 */
 	private void stitch_rows(PlateNode above, PlateNode below) {
 		for(int i=0; i < dimen; i++) {
 			above.below = below;
