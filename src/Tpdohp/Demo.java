@@ -16,7 +16,7 @@ public class Demo {
 	public static void main(String[] args) {
 		SimulatorParams params = new SimulatorParams(args);
 		Simulator sim = new Simulator(params);
-		//sim.heat();
+		sim.heat();
 		System.out.print(sim.toString());
 	}
 

@@ -12,14 +12,16 @@ public class Simulator {
 	 * If dimen is 3, Creates a new plate like: 
 	 * (t_l = top_left and has value 'top')
 	 * 
-	 *    null - null - null - null - null  - null
-	 *    null - t_l  -  top - top  - right   - null
-	 *    null - left -  0.0 - 0.0  - right - null
-	 *    null - left -  0.0 - 0.0  - right - null
-	 *    null - left -  0.0 - 0.0  - right - null
-	 *    null - bot  -  bot - bot  - bot   - null
+	 *    null - null - null - null - null - null  - null
+	 *    null - t_l  -  top - top  - top  - right - null
+	 *    null - left -  0.0 - 0.0  - 0.0  - right - null
+	 *    null - left -  0.0 - 0.0  - 0.0  - right - null
+	 *    null - left -  0.0 - 0.0  - 0.0  - right - null
+	 *    null - bot  -  bot - bot  - bot  - bot   - null
 	 * 
 	 * @Note The corners do not matter as we skip the edges in the heat method.
+	 * @Note bottom nodes and right nodes serve as sentinels, and as such are
+	 *   tracked.
 	 * @param dimen
 	 * @param top
 	 * @param bottom
@@ -28,81 +30,49 @@ public class Simulator {
 	 */
 	public Simulator(int startDimen, double top, double bottom, double left, double right) {
 		dimen = startDimen + 2; //need room in each dimension for the edges
-		int y = 0;
-		int x = 0;
-		top_left = new PlateNode(0.0, false, false);
-		PlateNode current = top_left;
-		PlateNode currentRow = top_left;
-		PlateNode above_row = null;
-		boolean bottom_edge = false;
-		
-		while(y < dimen-1)
+		PlateNode leftmost = create_node_top_or_bot_row(top, false);
+		PlateNode above = null;
+		top_left = leftmost;
+		for(int i=1; i < dimen-1; i++){
+			above = leftmost;
+			leftmost = create_node_mid_row(left, right);
+			stitch_rows(above, leftmost);	
+		}
+		above = leftmost;
+		leftmost = create_node_top_or_bot_row(bottom, true); //create the last row
+		stitch_rows(above, leftmost);
+	}
+	
+	private PlateNode create_node_top_or_bot_row(double temp, boolean is_bot) {
+		PlateNode leftmost = new PlateNode(temp, false, is_bot);
+		PlateNode current = leftmost;
+		for(int i=0; i < dimen-2; i++) //iterate to the second to last node.
 		{
-			boolean right_edge;
-			if(x >= dimen-2){
-				right_edge = true;
-			}
-			else{
-				right_edge = false;
-			}
-
-			if(current.is_right_edge && current.is_bottom_edge)
-			{
-				current.value = bottom; //we need to amend the value to bottom.
-				y++; //terminate the loop
-			}
-			else if(current.is_right_edge){// we have moved all the way to the right and need to move to the next row
-				current.value = right; //the current node is rightmost, so we need to amend its value
-				
-				// reset x and increment y
-				x = 0;
-				y++; // increment y and check if we are on the bottom row yet.
-				if(y == dimen-1){
-					bottom_edge = true;
-				}
-				// create a new node below the current leftmost node
-				currentRow.below = new PlateNode(currentRow, null, left, false, bottom_edge);
-				
-				// move the iterators to this new node 
-				current = currentRow.below;
-				currentRow = currentRow.below;
-				
-				// move above_row above this the node above this node
-				above_row = current.above;
-			}
-			else if(y == 0)
-			{
-				current.right = new PlateNode(current, top, right_edge, bottom_edge);
-				// move on to the right
-				current = current.right;
-				x++; 
-			}
-			else if(current.is_bottom_edge){
-				
-				current.right = new PlateNode(above_row, current, bottom, right_edge, bottom_edge);//current, bottom, right_edge, true);
-				
-				
-				// move on to the right
-				current = current.right;
-				above_row.below = current;
-			
-				above_row = above_row.right;
-				x++;
-			}
-			else { //somewhere in the left of the plate... continue right
-				double t = 0.0;
-				if(x == 0) {
-					t = left;
-				}
-				current.right = new PlateNode(above_row, current, t, right_edge, bottom_edge);
-				
-				// move on to the right
-				above_row = above_row.right;
-				above_row.below = current;
-				current = current.right;
-				x++;
-			}
-			
+			current.right = new PlateNode(current, temp, false, is_bot);
+			current = current.right;
+		}
+		current.right = new PlateNode(current, temp, true, is_bot); //make the right edge node
+		return leftmost;
+	}
+	
+	private PlateNode create_node_mid_row(double temp_left, double temp_right) {
+		PlateNode leftmost = new PlateNode(temp_left, false, false);
+		PlateNode current = leftmost;
+		for(int i=0; i < dimen-2; i++) //iterate to the second to last node.
+		{
+			current.right = new PlateNode(current, 0.0, false, false);
+			current = current.right;
+		}
+		current.right = new PlateNode(current, temp_right, true, false); //make the right edge node
+		return leftmost;
+	}
+	
+	private void stitch_rows(PlateNode above, PlateNode below) {
+		for(int i=0; i < dimen; i++) {
+			above.below = below;
+			below.above = above;
+			above = above.right;
+			below = below.right;
 		}
 	}
 	
