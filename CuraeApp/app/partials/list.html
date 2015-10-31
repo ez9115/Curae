@@ -1,0 +1,38 @@
+
+<section class="patientpage">
+<div class="search">
+        <h1> Patient Directory</h1>
+        <label>search: </label>
+        <input ng-model="query" placeholder="Search for Patients" autofocus>
+        <label class="formgroup"> by:
+            <select ng-model="patientOrder">
+            
+                <option value="name">Name</option>
+                <option value="Id">Id</option>
+            </select>
+            <label class="formgroup">
+                <input type="radio" ng-model="direction" name="direction" checked>
+                ascending
+            </label>
+                <label class="formgroup">
+                <input type="radio"  ng-model="direction" name="direction" value="reverse">
+            descending
+        </label>
+    </div>
+ 
+  <ul class="patientlist">
+    <li class="patient cf" ng-repeat="item in patients |filter: query |
+                orderBy:patientOrder:direction">
+        <a href="#/details/{{patients.indexOf(item)}}">
+      <div class="info">
+         <h2>{{item.id}}</h2>
+      </div>
+         <div>   
+        <h2>{{item.name}}</h2>
+       <!-- <h3>{{item.address}}</h3>-->
+      </div>
+        </a>
+    </li>
+  </ul>
+   
+</section>

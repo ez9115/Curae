@@ -1,0 +1,16 @@
+
+<section class="patientinfo">
+  <div class="patient cf" ng-model="patients">
+    <a href="#/details/{{prevItem}}" class="btn btn-left">&lt;</a>
+    <a href="#/details/{{nextItem}}" class="btn btn-right">&gt;</a>
+    <h1>{{patients[whichItem].name}}</h1>
+    <div class="info">
+      <h3>{{patients[whichItem].gender}}</h3>
+       <h3>Birth Date: {{patients[whichItem].birthDate}}</h3>
+        <h3>Status: {{patients[whichItem].actine}}</h3>
+ 
+      <div class="bio">{{patients[whichItem].address}}</div>
+    </div>
+  </div>
+  <a href="#/index.html">&laquo; Back to search</a>
+</section>
